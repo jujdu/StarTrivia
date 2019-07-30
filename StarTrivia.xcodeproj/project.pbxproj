@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		6FA8792B22EF7E9300880710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8792A22EF7E9300880710 /* AppDelegate.swift */; };
-		6FA8792D22EF7E9300880710 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8792C22EF7E9300880710 /* ViewController.swift */; };
+		6FA8792D22EF7E9300880710 /* SelectPersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8792C22EF7E9300880710 /* SelectPersonVC.swift */; };
 		6FA8793022EF7E9300880710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA8792E22EF7E9300880710 /* Main.storyboard */; };
 		6FA8793222EF7E9400880710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA8793122EF7E9400880710 /* Assets.xcassets */; };
 		6FA8793522EF7E9400880710 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA8793322EF7E9400880710 /* LaunchScreen.storyboard */; };
+		6FA8793F22EF810C00880710 /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FA8793C22EF810B00880710 /* Starjedi.ttf */; };
+		6FA8794022EF810C00880710 /* Starjhol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FA8793D22EF810C00880710 /* Starjhol.ttf */; };
+		6FA8794122EF810C00880710 /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FA8793E22EF810C00880710 /* Starjout.ttf */; };
+		6FA8794822EF87A000880710 /* BlackBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8794722EF87A000880710 /* BlackBgView.swift */; };
+		6FA8794B22EF888F00880710 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8794A22EF888F00880710 /* Constants.swift */; };
+		6FA8794D22F0979C00880710 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6FA8794C22F0979C00880710 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6FA8792722EF7E9300880710 /* StarTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA8792A22EF7E9300880710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6FA8792C22EF7E9300880710 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6FA8792C22EF7E9300880710 /* SelectPersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPersonVC.swift; sourceTree = "<group>"; };
 		6FA8792F22EF7E9300880710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FA8793122EF7E9400880710 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FA8793422EF7E9400880710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FA8793622EF7E9400880710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FA8793C22EF810B00880710 /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		6FA8793D22EF810C00880710 /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
+		6FA8793E22EF810C00880710 /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
+		6FA8794722EF87A000880710 /* BlackBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBgView.swift; sourceTree = "<group>"; };
+		6FA8794A22EF888F00880710 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6FA8794C22F0979C00880710 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,68 @@
 		6FA8792922EF7E9300880710 /* StarTrivia */ = {
 			isa = PBXGroup;
 			children = (
+				6FA8794622EF813800880710 /* Model */,
+				6FA8794522EF813300880710 /* View */,
+				6FA8794422EF812B00880710 /* Controller */,
 				6FA8792A22EF7E9300880710 /* AppDelegate.swift */,
-				6FA8792C22EF7E9300880710 /* ViewController.swift */,
+				6FA8792C22EF7E9300880710 /* SelectPersonVC.swift */,
+				6FA8794322EF811D00880710 /* Resources */,
+				6FA8794922EF882B00880710 /* Utilities */,
 				6FA8792E22EF7E9300880710 /* Main.storyboard */,
 				6FA8793122EF7E9400880710 /* Assets.xcassets */,
 				6FA8793322EF7E9400880710 /* LaunchScreen.storyboard */,
 				6FA8793622EF7E9400880710 /* Info.plist */,
+				6FA8794C22F0979C00880710 /* .gitignore */,
 			);
 			path = StarTrivia;
+			sourceTree = "<group>";
+		};
+		6FA8794222EF811400880710 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6FA8793C22EF810B00880710 /* Starjedi.ttf */,
+				6FA8793D22EF810C00880710 /* Starjhol.ttf */,
+				6FA8793E22EF810C00880710 /* Starjout.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6FA8794322EF811D00880710 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6FA8794222EF811400880710 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6FA8794422EF812B00880710 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6FA8794522EF813300880710 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6FA8794722EF87A000880710 /* BlackBgView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6FA8794622EF813800880710 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6FA8794922EF882B00880710 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6FA8794A22EF888F00880710 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +189,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FA8793522EF7E9400880710 /* LaunchScreen.storyboard in Resources */,
+				6FA8794D22F0979C00880710 /* .gitignore in Resources */,
 				6FA8793222EF7E9400880710 /* Assets.xcassets in Resources */,
+				6FA8793F22EF810C00880710 /* Starjedi.ttf in Resources */,
+				6FA8794022EF810C00880710 /* Starjhol.ttf in Resources */,
+				6FA8794122EF810C00880710 /* Starjout.ttf in Resources */,
 				6FA8793022EF7E9300880710 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +205,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FA8792D22EF7E9300880710 /* ViewController.swift in Sources */,
+				6FA8792D22EF7E9300880710 /* SelectPersonVC.swift in Sources */,
 				6FA8792B22EF7E9300880710 /* AppDelegate.swift in Sources */,
+				6FA8794822EF87A000880710 /* BlackBgView.swift in Sources */,
+				6FA8794B22EF888F00880710 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

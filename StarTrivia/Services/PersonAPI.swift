@@ -13,8 +13,8 @@ import SwiftyJSON
 class PersonAPI {
     
     // Web request with Alamofire and Codable
-    func getRandomPersonAlamofire(id: Int, completion: @escaping PersonResponseComplition) {
-        guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
+    func getRandomPersonAlamofire(id: Int, completion: @escaping PersonResponseCompletion) {
+        guard let url = URL(string: "\(PERSON_URL)\(1)") else { return }
         Alamofire.request(url).responseJSON { (response) in
             if let error = response.result.error {
                 debugPrint(error.localizedDescription)
@@ -75,7 +75,7 @@ class PersonAPI {
     
     
     // Web Request with URL Session
-    func getRandomPersonUrlSession(id: Int, completion: @escaping PersonResponseComplition) {
+    func getRandomPersonUrlSession(id: Int, completion: @escaping PersonResponseCompletion) {
     
         guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
         

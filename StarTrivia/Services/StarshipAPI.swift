@@ -1,16 +1,16 @@
 //
-//  VehicleAPI.swift
+//  StarshipAPI.swift
 //  StarTrivia
 //
-//  Created by Michael Sidoruk on 01/08/2019.
+//  Created by Michael Sidoruk on 02/08/2019.
 //  Copyright © 2019 Michael Sidoruk. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-class VehicleAPI {
-    func getVehicle(url: String, completion: @escaping VehicleResponseCompletion) {
+class StarshipAPI {
+    func getStarship(url: String, completion: @escaping StarshipResponseCompletion) {
         guard let url = URL(string: url) else { return }
         Alamofire.request(url).responseJSON { (response) in
             if let error = response.result.error {
@@ -22,8 +22,8 @@ class VehicleAPI {
             guard let data = response.data else { return completion(nil) }
             let jsonDecoder = JSONDecoder()
             do {
-                let vehicle = try jsonDecoder.decode(Vehicle.self, from: data)
-                completion(vehicle)
+                let starship = try jsonDecoder.decode(Starship.self, from: data)
+                completion(starship)
             } catch {
                 debugPrint(error.localizedDescription)
                 completion(nil)
@@ -31,4 +31,5 @@ class VehicleAPI {
         }
         
     }
+    
 }

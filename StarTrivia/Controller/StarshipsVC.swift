@@ -10,24 +10,69 @@ import UIKit
 
 class StarshipsVC: UIViewController, PersonProtocol {
 
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var modelLbl: UILabel!
+    @IBOutlet weak var makerLbl: UILabel!
+    @IBOutlet weak var costLbl: UILabel!
+    @IBOutlet weak var lengthLbl: UILabel!
+    @IBOutlet weak var speedLbl: UILabel!
+    @IBOutlet weak var crewLbl: UILabel!
+    @IBOutlet weak var passengersLbl: UILabel!
+    @IBOutlet weak var capacityLbl: UILabel!
+    @IBOutlet weak var classLbl: UILabel!
+    @IBOutlet weak var previousBtn: UIButton!
+    @IBOutlet weak var nextBtn: UIButton!
+    
     var person: Person!
+    var starshipAPI = StarshipAPI()
+    var starships = [String]()
+    var currentStarship = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(person.name)
+        starships = person.starshipUrl
+        previousBtn.isEnabled = false
+        nextBtn.isEnabled = starships.count > 1
 
-        // Do any additional setup after loading the view.
+        guard let firstStarship = starships.first else { return }
+        getStarship(url: firstStarship)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func getStarship(url: String) {
+        starshipAPI.getStarship(url: url) { (starship) in
+            guard let starship = starship else { return }
+            self.updateView(starship: starship)
+        }
     }
-    */
-
+    
+    func updateView(starship: Starship) {
+        nameLbl.text = starship.name
+        modelLbl.text = starship.model
+        makerLbl.text = starship.manufacturer
+        costLbl.text = starship.cost
+        lengthLbl.text = starship.length
+        speedLbl.text = starship.speed
+        crewLbl.text = starship.crew
+        passengersLbl.text = starship.passengers
+        capacityLbl.text = starship.capacity
+        classLbl.text = starship.starshipClass
+    }
+    
+    func setBtnState() {
+        previousBtn.isEnabled = currentStarship == 0 ? false : true
+        nextBtn.isEnabled = currentStarship == starships.count - 1 ? false : true
+        getStarship(url: starships[currentStarship])
+    }
+    
+    @IBAction func previousPressed(_ sender: Any) {
+        currentStarship -= 1
+        setBtnState()
+    }
+    
+    @IBAction func nextPressed(_ sender: Any) {
+        currentStarship += 1
+        setBtnState()
+    }
+    
+    
 }

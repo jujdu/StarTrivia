@@ -31,6 +31,7 @@ class VehiclesVC: UIViewController, PersonProtocol {
         vehicles = person.vehicleUrl
         previousBtn.isEnabled = false
         nextBtn.isEnabled = vehicles.count > 1
+        
         guard let firstVehicle = vehicles.first else { return }
         getVehicle(url: firstVehicle)
     }

@@ -41,11 +41,11 @@ class StarshipsVC: UIViewController, PersonProtocol {
     func getStarship(url: String) {
         starshipAPI.getStarship(url: url) { (starship) in
             guard let starship = starship else { return }
-            self.updateView(starship: starship)
+            self.setupView(starship: starship)
         }
     }
     
-    func updateView(starship: Starship) {
+    func setupView(starship: Starship) {
         nameLbl.text = starship.name
         modelLbl.text = starship.model
         makerLbl.text = starship.manufacturer

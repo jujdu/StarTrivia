@@ -17,7 +17,6 @@ struct Starship: Codable {
     let speed: String
     let crew: String
     let passengers: String
-    //TODO: скопировать UI с vehicle UI, анбэднуть view добавить эти 3 лейбла + скопироватть кнопки
     let capacity: String
     let starshipClass: String
     

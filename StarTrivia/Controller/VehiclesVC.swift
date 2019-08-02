@@ -21,6 +21,8 @@ class VehiclesVC: UIViewController, PersonProtocol {
     @IBOutlet weak var previousBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     var person: Person!
     let vehicleAPI = VehicleAPI()
     var vehicles = [String]()
@@ -37,7 +39,9 @@ class VehiclesVC: UIViewController, PersonProtocol {
     }
     
     func getVehicle(url: String) {
+        spinner.startAnimating()
         vehicleAPI.getVehicle(url: url) { (vehicle) in
+            self.spinner.stopAnimating()
             guard let vehicle = vehicle else { return }
             self.setupView(vehicle: vehicle)
         }

@@ -34,6 +34,7 @@
 		6FF741A622F43D49002E11B5 /* StarshipAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF741A522F43D49002E11B5 /* StarshipAPI.swift */; };
 		6FF741A822F44A68002E11B5 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF741A722F44A68002E11B5 /* Film.swift */; };
 		6FF741AA22F44B74002E11B5 /* FilmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF741A922F44B74002E11B5 /* FilmAPI.swift */; };
+		6FF741AC22F4606A002E11B5 /* FixedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF741AB22F4606A002E11B5 /* FixedTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		6FF741A522F43D49002E11B5 /* StarshipAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipAPI.swift; sourceTree = "<group>"; };
 		6FF741A722F44A68002E11B5 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		6FF741A922F44B74002E11B5 /* FilmAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAPI.swift; sourceTree = "<group>"; };
+		6FF741AB22F4606A002E11B5 /* FixedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedTextView.swift; sourceTree = "<group>"; };
 		D315FCA62D797245CA368107 /* Pods-StarTrivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarTrivia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarTrivia/Pods-StarTrivia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 			children = (
 				6FA8794722EF87A000880710 /* BlackBgView.swift */,
 				6FA8795322F3398D00880710 /* FadeEnabledBtn.swift */,
+				6FF741AB22F4606A002E11B5 /* FixedTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				6FA8792D22EF7E9300880710 /* SelectPersonVC.swift in Sources */,
 				6FA8792B22EF7E9300880710 /* AppDelegate.swift in Sources */,
 				6FA8794822EF87A000880710 /* BlackBgView.swift in Sources */,
+				6FF741AC22F4606A002E11B5 /* FixedTextView.swift in Sources */,
 				6FA8795022F0AAD600880710 /* PersonAPI.swift in Sources */,
 				6FA8795C22F3402800880710 /* FilmsVC.swift in Sources */,
 				6FF741AA22F44B74002E11B5 /* FilmAPI.swift in Sources */,

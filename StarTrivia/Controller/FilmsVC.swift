@@ -19,6 +19,7 @@ class FilmsVC: UIViewController, PersonProtocol {
     @IBOutlet weak var previousBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var person: Person!
     let filmAPI = FilmAPI()
@@ -27,7 +28,7 @@ class FilmsVC: UIViewController, PersonProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        films = person.filmUrls
+        films = person.filmUrls.sorted()
         previousBtn.isEnabled = false
         nextBtn.isEnabled = films.count > 1
         
@@ -36,7 +37,9 @@ class FilmsVC: UIViewController, PersonProtocol {
     }
 
     func getFilm(url: String) {
+        spinner.startAnimating()
         filmAPI.getFilm(url: url) { (film) in
+            self.spinner.stopAnimating()
             guard let film = film else { return }
             self.setupView(film: film)
         }
